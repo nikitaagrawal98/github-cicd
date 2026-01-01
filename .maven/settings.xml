@@ -11,6 +11,38 @@
 			<username>~~~Client~~~</username>
 			<password>${client.id}~?~${client.secret}</password>
 		</server>
+		<server>
+			<id>anypoint-exchange-v3</id>
+			<username>~~~Client~~~</username>
+			<password>${client.id}~?~${client.secret}</password>
+		</server>
 	</servers>
+	
+	<profiles>
+		<profile>
+			<id>anypoint</id>
+			<repositories>
+				<repository>
+					<id>anypoint-exchange-v3</id>
+					<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+				</repository>
+				<repository>
+					<id>Repository</id>
+					<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+				</repository>
+			</repositories>
+			
+			<pluginRepositories>
+				<pluginRepository>
+					<id>anypoint-exchange-v3</id>
+					<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+	</profiles>
+	
+	<activeProfiles>
+		<activeProfile>anypoint</activeProfile>
+	</activeProfiles>
 
 </settings>
