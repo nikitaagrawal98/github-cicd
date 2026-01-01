@@ -16,11 +16,19 @@
 			<username>~~~Client~~~</username>
 			<password>${client.id}~?~${client.secret}</password>
 		</server>
+		<server>
+			<username>${nexus_username}</username>
+			<password>${nexus_password}</password>
+			<id>mulesoft-ee</id>
+		</server>
 	</servers>
 	
 	<profiles>
 		<profile>
 			<id>anypoint</id>
+			<activation>
+        		<activeByDefault>true</activeByDefault>
+      		</activation>
 			<repositories>
 				<repository>
 					<id>anypoint-exchange-v3</id>
@@ -29,6 +37,11 @@
 				<repository>
 					<id>Repository</id>
 					<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/705b3919-c49d-4b5c-8fd9-247aebcd988f/maven</url>
+				</repository>
+				<repository>
+					<id>mulesoft-ee</id>
+					<name>Mule Repository</name>
+					<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
 				</repository>
 			</repositories>
 			

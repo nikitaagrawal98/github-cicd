@@ -23,6 +23,9 @@ jobs:
         distribution: 'zulu'
         java-version: 17
     - name: Test with Maven
+      env:
+        nexus_username: ${{ secrets.nexus_username }}
+        nexus_password: ${{ secrets.nexus_password }}
       run: mvn test --settings .maven/settings.xml
         
   build:
