@@ -44,6 +44,9 @@
 						<releaseChannel>NONE</releaseChannel>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
+						<connectedAppClientId>${client.id}</connectedAppClientId>
+                        <connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
+                        <connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<deploymentSettings>
 							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
 						</deploymentSettings>
