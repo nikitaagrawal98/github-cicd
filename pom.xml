@@ -32,7 +32,7 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<classifier>mule-application</classifier>
+					<!-- <classifier>mule-application</classifier> -->
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<businessGroupId>${project.groupId}</businessGroupId>
@@ -44,8 +44,8 @@
 						<!-- <releaseChannel>NONE</releaseChannel> -->
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
-						<connectedAppClientId>${client.id}</connectedAppClientId>
-                        <connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
+						<connectedAppClientId>8e1717f5abb0414abe9688b00f38df05</connectedAppClientId>
+                        <connectedAppClientSecret>eBb6Ad00ad7440d48A286EcD7D6a62cA</connectedAppClientSecret>
                         <connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<deploymentSettings>
 							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
