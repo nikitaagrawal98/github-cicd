@@ -64,6 +64,7 @@
 					</execution>
 				</executions>
 				<configuration>
+					<app.runtime>4.10.1</app.runtime>
 					<coverage>
 						<runCoverage>true</runCoverage>
 						<failBuild>true</failBuild>
